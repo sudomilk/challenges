@@ -7,6 +7,7 @@ def load_words():
 def calc_word_value(word):
     """Calculate the value of the word entered into function
     using imported constant mapping LETTER_SCORES"""
+    #words with hypens do not count in Scrabble
     return sum([LETTER_SCORES[l.upper()] for l in word if l != '-'])
 
 def max_word_value(words=load_words()):
